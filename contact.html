@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Abhishek Mishra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ffc107;
+      --bg: #0e0e0e;
+      --card-bg: #1a1a1a;
+      --hover-bg: #2f2f2f;
+      --text-light: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text-light);
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .sidebar {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.1);
+    }
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      margin-bottom: 15px;
+    }
+    .sidebar img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+    }
+    .sidebar h2 {
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+    .sidebar p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .sidebar .btn {
+      background: var(--primary);
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .info-block {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .info-block div {
+      background: var(--hover-bg);
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .info-block i {
+      color: var(--primary);
+    }
+    .socials {
+      margin-top: 20px;
+    }
+    .socials a {
+      color: var(--text-light);
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .socials a:hover {
+      color: var(--primary);
+    }
+
+    .main {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .main h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .map {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(255, 193, 7, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      background: var(--card-bg);
+      border: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: white;
+      font-size: 15px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .contact-form button {
+      align-self: flex-start;
+      background: var(--primary);
+      color: #000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #e0ac00;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <img src="abhishek dp.jpg" alt="Abhishek Mishra">
+      <h2>Abhishek Mishra</h2>
+      <p>4th Year BTech CSE Student</p>
+      <a href="https://github.com/abhishekmishr07" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <div class="info-block">
+        <div><i class="fas fa-envelope"></i> am8176033@gmail.com</div>
+        <div><i class="fas fa-map-marker-alt"></i> Beta 1, Greater Noida</div>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/abhishek-mishra-8b1190273/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/abhis.hek_mishra/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="main">
+      <h1>Contact</h1>
+      <iframe 
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14020.740721034703!2d77.51013938030156!3d28.47096832801125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea7e472390b3%3A0x927c7cefd2aa9b3c!2sBeta%201%2C%20Greater%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1685267318723!5m2!1sen!2sin" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
