@@ -35,7 +35,6 @@
       gap: 20px;
     }
 
-    /* Sidebar/Profile Section */
     .sidebar {
       background-color: var(--sidebar-bg);
       padding: 30px 20px;
@@ -47,22 +46,21 @@
     }
 
     .sidebar img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 4px solid var(--primary);
+      border: 3px solid var(--primary);
       object-fit: cover;
     }
 
     .sidebar h2 {
       color: var(--primary);
-      margin-top: 15px;
-      font-size: 22px;
+      margin-top: 10px;
+      font-size: 20px;
     }
 
     .sidebar span {
       display: block;
-      margin-top: 5px;
       font-size: 14px;
       color: #ccc;
     }
@@ -73,15 +71,25 @@
     }
 
     .info div {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       color: #ccc;
     }
 
-    /* Right Certificate Content */
+    .socials a {
+      margin: 0 8px;
+      color: #ccc;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--primary);
+    }
+
     .content {
       flex: 1;
       background-color: var(--content-bg);
@@ -94,7 +102,7 @@
     .content h1 {
       color: var(--primary);
       margin-bottom: 25px;
-      font-size: 26px;
+      font-size: 24px;
     }
 
     .certificates {
@@ -104,12 +112,11 @@
       padding-bottom: 10px;
       scroll-snap-type: x mandatory;
       padding-left: 20px;
-scroll-padding-left: 20px;
-
+      scroll-padding-left: 20px;
     }
 
     .certificates::-webkit-scrollbar {
-      height: 8px;
+      height: 6px;
     }
 
     .certificates::-webkit-scrollbar-thumb {
@@ -117,34 +124,17 @@ scroll-padding-left: 20px;
       border-radius: 5px;
     }
 
-
     .certificate-card {
-  min-width: 750px;
-  background-color: var(--hover-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.1);
-  
-  display: flex;
-  flex-direction: column;
-}
-
-.certificate-card h3 {
-  padding: 16px;
-  font-size: 18px;
-  text-align: center;
-  color: var(--primary);
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-   
-   
+      min-width: 750px;
+      background-color: var(--hover-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
 
     .certificate-card:hover {
       transform: scale(1.05);
@@ -153,29 +143,56 @@ scroll-padding-left: 20px;
 
     .certificate-card img {
       width: 100%;
-      height:500px;
+      height: 500px;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
 
-   
+    .certificate-card h3 {
+      padding: 16px;
+      font-size: 18px;
+      text-align: center;
+      color: var(--primary);
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+    /* MOBILE STYLES */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        padding: 10px;
       }
 
       .sidebar {
         width: 100%;
+        padding: 20px;
+      }
+
+      .content {
+        padding: 20px;
       }
 
       .certificates {
         flex-direction: column;
         overflow-x: visible;
+        padding-left: 0;
       }
 
       .certificate-card {
         width: 100%;
+        min-width: unset;
+      }
+
+      .certificate-card img {
+        height: 250px;
+      }
+
+      .content h1 {
+        font-size: 20px;
+        text-align: center;
       }
     }
   </style>
@@ -190,10 +207,10 @@ scroll-padding-left: 20px;
       <div class="info">
         <div><i class="fas fa-envelope"></i> am8176033@gmail.com</div>
         <div><i class="fas fa-map-marker-alt"></i> Greater Noida, India</div>
-         <div class="socials">
-        <a href="https://www.linkedin.com/in/abhishek-mishra-8b1190273/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/abhis.hek_mishra/" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/abhishek-mishra-8b1190273/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/abhis.hek_mishra/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
 
@@ -202,70 +219,48 @@ scroll-padding-left: 20px;
       <h1>My Certificates</h1>
       <div class="certificates">
         <div class="certificate-card">
-          <img src="img/internship.jpg" alt="Certificate 1">
+          <img src="img/internship.jpg" alt="Internship Certificate">
           <h3>Internship Certificate</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/data science.jpg" alt="Certificate 2">
-          <h3>Data Science Markerting </h3>
+          <img src="img/data science.jpg" alt="Data Science">
+          <h3>Data Science Marketing</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/hacking.jpg" alt="Certificate 3">
+          <img src="img/hacking.jpg" alt="Ethical Hacking">
           <h3>Ethical Hacking</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/machine lerning.png" alt="Certificate 4">
+          <img src="img/machine lerning.png" alt="Machine Learning">
           <h3>Machine Learning</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/javascript.jpg" alt="Certificate 5">
+          <img src="img/javascript.jpg" alt="JavaScript">
           <h3>JavaScript</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/html.jpg" alt="Certificate 6">
+          <img src="img/html.jpg" alt="HTML">
           <h3>HTML Course</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/leadership.jpg" alt="Certificate 7">
-          <h3>leadership</h3>
+          <img src="img/leadership.jpg" alt="Leadership">
+          <h3>Leadership</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/merit.jpg" alt="Certificate 8">
+          <img src="img/merit.jpg" alt="Merit">
           <h3>College Merit Scholarship</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/offer letter.jpg" alt="Certificate 9">
-          <h3>Internship Offer letter</h3>
+          <img src="img/offer letter.jpg" alt="Internship Offer">
+          <h3>Internship Offer Letter</h3>
         </div>
         <div class="certificate-card">
-          <img src="img/offer.jpg" alt="Certificate 10">
-          <h3>Offer letter</h3>
+          <img src="img/offer.jpg" alt="Offer Letter">
+          <h3>Offer Letter</h3>
         </div>
-         
-         <div class="certificate-card">
-          <img src="img/offer2.jpg" alt="Certificate 2">
-          <h3>Offer letter </h3>
-        </div>
-         <div class="certificate-card">
-          <img src="img/offer3.png" alt="Certificate 2">
-          <h3>Offer letter </h3>
-        </div>
-
         <div class="certificate-card">
-            <img src="img/presentation .jpg" alt="Certificate 2">
-            <h3>presentation  </h3>
-          </div>
-
-          <div class="certificate-card">
-            <img src="img/project.jpg" alt="Certificate 2">
-            <h3>Project Completion  </h3>
-          </div>
-          <div class="certificate-card">
-            <img src="img/test.jpg" alt="Certificate 2">
-            <h3>Aptitude test </h3>
-          </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+          <img src="img/offer2.jpg" alt="Offer 2">
+          <h3>Offer Letter</h3>
+        </div>
+        <div class="certificate-card">
+          <img src="img/offer3.png" alt="Offer
